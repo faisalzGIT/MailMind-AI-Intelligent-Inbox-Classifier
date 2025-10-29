@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📨 MagicSlides Assignment — Gmail Email Classifier
 
-## Getting Started
+This project is a **Next.js App Router**–based web app that connects with **Google OAuth** and **Gmail API** to fetch user emails and classify them using **Google Gemini API model: gemini-2.0-flash**.  
+It was built as part of the **MagicSlides assignment**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Tech Stack
+- **Next.js (App Router + API Routes)**
+- **Tailwind CSS** for styling
+- **NextAuth.js** for Google OAuth authentication
+- **Gmail API** for fetching emails
+- **Gemini API (Google AI)** for email classification
+- **JavaScript (ESNext)**
+
+---
+
+## ✨ Features
+
+### 🔐 Authentication
+- Secure Google login with **NextAuth.js**.
+
+### 📩 Fetch Emails
+- Fetches Gmail emails of the authenticated user.
+- User can choose how many emails to fetch (10, 15, 20, 25, 30).
+
+### 🧠 Classification
+- Classifies emails into **Promotions**, **Social**, **Important**, and **General** categories using **Gemini API**.
+- Displays dynamic color-coded tags on each email.
+
+### 💬 Email Detail View
+- Clicking an email opens a **detail panel** showing subject, sender, and content.
+- Clean, responsive two-pane Gmail-style layout.
+
+### 🎛️ Controls
+- Manual **Fetch Emails** and **Classify Emails** buttons.
+- Prevents unnecessary re-fetching when switching tabs.
+
+### 💎 UX Enhancements
+- Shimmer placeholders while loading.
+- Error handling & real-time feedback messages.
+- Persistent Gemini API key storage.
+
+---
+
+## ⚙️ Folder Structure
+
+```
+📁 app/
+ ┣ 📂 api/
+ ┃ ┣ 📂 auth/
+ ┃ ┃ ┗ 📂 [...nextauth]/
+ ┃ ┃    ┗ 📜 route.js
+ ┃ ┣ 📂 classifyEmails/
+ ┃ ┃ ┗ 📜 route.js
+ ┃ ┣ 📂 fetchEmails/
+ ┃ ┃ ┗ 📜 route.js
+ ┣ 📂 emails/
+ ┃ ┗ 📜 page.js
+ ┣ 📜 layout.js
+ ┣ 📜 Providers.js
+ ┣ 📜 globals.css
+ ┣ 📜 favicon.ico
+ ┗ 📜 page.js
+
+📁 components/
+ ┣ 📜 AIKeyInput.js
+ ┗ 📜 ShimmerCard.js
+
+📜 .env.local
+📜 README.md
+📜 package.json
+📜 next.config.mjs
+📜 tailwind.config.js
+📜 postcss.config.js
+📜 jsconfig.json
+📜 node_modules/
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🔑 Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` file in your project root with:
 
-## Learn More
+```env
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+NEXTAUTH_SECRET=your_nextauth_secret
+NEXTAUTH_URL=http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧩 API Endpoints
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### `/api/fetchEmails`
+Fetches user emails from Gmail API.
 
-## Deploy on Vercel
+### `/api/classifyEmails`
+Classifies fetched emails using Gemini API.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧠 How It Works
+1. **User logs in** with Google OAuth.
+2. **Fetch Emails** → Gmail API retrieves email list.
+3. **Emails display** with subject, sender, and snippet.
+4. **Classify Emails** → Gemini API predicts categories.
+5. **Tags update** on UI (Promotions, Social, etc.).
+6. **Click an email** → Opens detailed content panel.
+
+---
+
+## 🖥️ Run Locally
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+
+Then open [http://localhost:3000](http://localhost:3000).
+
+---
+
+
+
+---
+
+## 🏁 Conclusion
+This project showcases:
+- **Google OAuth & Gmail API integration**
+- **AI-based classification with Gemini model: gemini-2.0-flash**
+- **Clean UI built with Tailwind CSS**
+- **Full-stack Next.js development**
+
+Built with ❤️ by **Mohammad Faisal**  
+for the **MagicSlides Assignment**.

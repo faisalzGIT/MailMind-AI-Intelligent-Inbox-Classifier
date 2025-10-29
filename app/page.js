@@ -1,6 +1,8 @@
 "use client";
 
+import AIKeyInput from "@/components/AIKeyInput";
 import { signIn, signOut, useSession } from "next-auth/react";
+import Link from "next/link";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -11,7 +13,7 @@ export default function Home() {
         <>
           <button
             onClick={() => signIn("google")}
-            className="border px-4 py-2 rounded-md"
+            className="border px-4 py-2 rounded-md hover:bg-amber-50 hover:text-black"
           >
             Login with Google
           </button>
@@ -28,10 +30,15 @@ export default function Home() {
 
           <button
             onClick={() => signOut()}
-            className="border px-4 py-2 rounded-md"
+            className="border px-4 py-2 rounded-md hover:bg-gray-100 hover:text-black"
           >
             Logout
           </button>
+        <AIKeyInput />
+
+        <Link href="/emails" className="border px-4 py-2 rounded-md hover:bg-gray-100 hover:text-black">
+            Go to Emails
+        </Link>
         </>
       )}
     </div>
