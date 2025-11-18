@@ -49,7 +49,7 @@ Answer with only one word from the list.
                     );
 
                     const data = await res.json();
-                    console.log("Gemini raw:", JSON.stringify(data, null, 2));
+                    // console.log("Gemini raw:", JSON.stringify(data, null, 2));
 
                     let category = data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "General";
                     category = category.split("\n")[0].trim();
