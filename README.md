@@ -142,4 +142,8 @@ This project showcases:
 - **Clean UI built with Tailwind CSS**
 - **Full-stack Next.js development**
 
+<<<<<<< HEAD
 Built with ❤️ by **Mohammad Faisal** and developed with assistance from **GitHub Copilot**  
+=======
+Built with ❤️ by **Mohammad Faisal**  
+>>>>>>> 9df219e5441957dfdad766abde1a2ac55faaf505
