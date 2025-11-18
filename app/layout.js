@@ -2,8 +2,8 @@ import "./globals.css";
 import Providers from "./Providers";
 
 export const metadata = {
-  title: "MagicSlides Assignment",
-  description: "Email classification app by Faisal",
+  title: "MailMind AI — Intelligent Inbox Classifier",
+  description: "AI based Email classification app by Faisal",
 };
 
 export default function RootLayout({ children }) {

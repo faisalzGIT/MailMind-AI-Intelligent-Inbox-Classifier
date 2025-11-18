@@ -1,7 +1,6 @@
-# 📨 MagicSlides Assignment — Gmail Email Classifier
+# 📨 MailMind AI — Intelligent Inbox Classifier
 
 This project is a **Next.js App Router**–based web app that connects with **Google OAuth** and **Gmail API** to fetch user emails and classify them using **Google Gemini API model: gemini-2.0-flash**.  
-It was built as part of the **MagicSlides assignment**.
 
 ---
 
@@ -19,6 +18,8 @@ It was built as part of the **MagicSlides assignment**.
 
 ### 🔐 Authentication
 - Secure Google login with **NextAuth.js**.
+- **Dedicated login page** with different UI for logged-in and logged-out states.
+- **User profile image** dynamically displayed from session data.
 
 ### 📩 Fetch Emails
 - Fetches Gmail emails of the authenticated user.
@@ -31,6 +32,9 @@ It was built as part of the **MagicSlides assignment**.
 ### 💬 Email Detail View
 - Clicking an email opens a **detail panel** showing subject, sender, and content.
 - Clean, responsive two-pane Gmail-style layout.
+
+### 🔍 Email Search
+- Search emails by **sender name** or **subject** for quick filtering.
 
 ### 🎛️ Controls
 - Manual **Fetch Emails** and **Classify Emails** buttons.
@@ -138,5 +142,4 @@ This project showcases:
 - **Clean UI built with Tailwind CSS**
 - **Full-stack Next.js development**
 
-Built with ❤️ by **Mohammad Faisal**  
-for the **MagicSlides Assignment**.
+Built with ❤️ by **Mohammad Faisal** and developed with assistance from **GitHub Copilot**  
